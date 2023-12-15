@@ -19,6 +19,7 @@ import {
   npm,
 } from "./components/ProfileCardComps";
 import { IconTech } from "./components/StackCardComps";
+import EmailForm from "./components/EmailForm";
 
 const externalLInkIcon = (
   <svg
@@ -54,7 +55,7 @@ function Card({ children, styles }) {
 
 function App() {
   return (
-    <div className="bg-neutral-100 lg:px-6 flex justify-center items-center 2xl:h-[100vh] cursor-default">
+    <div className="bg-neutral-100 p-6 flex justify-center items-center 2xl:h-[100vh] cursor-default">
       <div className="flex flex-wrap justify-center">
         {/* PROFILE */}
         <Card
@@ -349,6 +350,12 @@ function App() {
               />
             </div>
           </div>
+        </Card>
+        <Card styles={
+            "p-6 bg-neutral-500 flex flex-col gap-12 justofy-center items-center w-full md:w-[250px] hover:bg-neutral-700"
+          }>
+          <h3 className="text-xl text-white font-semibold">Write me</h3>
+          <EmailForm/>
         </Card>
       </div>
     </div>
