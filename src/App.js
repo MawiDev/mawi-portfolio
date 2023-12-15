@@ -6,6 +6,8 @@ import ponga from "./images/paoloponga.png";
 import macraman from "./images/macraman.png";
 import asilo from "./images/asilo.png";
 import npmIcon from "./icons/npm.png";
+import bootstrap from "./icons/bootstrap.png";
+import hackmeeting from "./images/hackmeeting.png";
 
 import {
   LinkCard,
@@ -52,7 +54,7 @@ function Card({ children, styles }) {
 
 function App() {
   return (
-    <div className="bg-neutral-100 lg:px-24 flex justify-center items-center lg:h-[100vh]">
+    <div className="bg-neutral-100 lg:px-6 flex justify-center items-center 2xl:h-[100vh] cursor-default">
       <div className="flex flex-wrap justify-center">
         {/* PROFILE */}
         <Card
@@ -63,7 +65,7 @@ function App() {
           <div className="flex justify-center items-center gap-6">
             <ProfileImg styles={"rounded-full border-2 border-white"} />
             <div>
-              <h1 className="text-4xl font-semibold">MawiDev</h1>
+              <h1 className="text-4xl font-semibold">Riccardo Savio</h1>
               <h4 className="text-lg font-light">Web Developer</h4>
             </div>
           </div>
@@ -124,7 +126,19 @@ function App() {
             />
           </div>
         </Card>
-
+        {/* PRESENTAZIONE */}
+        <Card
+          styles={
+            "p-6 bg-neutral-500 text-white flex flex-col justify-center items-center gap-6 sm:w-full md:w-[300px] hover:bg-neutral-700"
+          }
+        >
+          <p className="text-lg">
+            Hi, I'm <strong>Riccardo Savio</strong> born in '95. <br /> I've
+            been working as a waiter and in the last year I'm moving into web
+            development. <br /> I'm learning react and laravel and making
+            websites as a freelancer.
+          </p>
+        </Card>
         {/* OSTEOPATA */}
         <Card
           styles={
@@ -282,7 +296,7 @@ function App() {
         {/* NPM PACK*/}
         <Card
           styles={
-            "px-6 pb-6 bg-white flex flex-col justify-center items-center gap-6 sm:w-full md:w-[300px]"
+            "px-6 pb-6 bg-white flex flex-col justify-center items-center gap-6 w-full md:w-[300px]"
           }
         >
           <img src={npmIcon} alt="npm" width={80} />
@@ -304,6 +318,37 @@ function App() {
             {externalLInkIconDark}
             <h4 className="text-xl hover:underline">mawi-react-app</h4>
           </a>
+        </Card>
+        {/* HACKMEETING */}
+        <Card
+          styles={
+            "p-5 bg-[#454545] flex flex-col justify-start items-start gap-6 hover:bg-gray-400"
+          }
+        >
+          <h3 className="px-2 lg:text-lg font-semibold uppercase text-white">
+            Hackmeeting 0x15
+          </h3>
+          <img
+            src={hackmeeting}
+            width={350}
+            alt="preview"
+            className="rounded-md"
+          />
+          <div className="px-2 flex flex-row justify-between w-full">
+            <a href="https://www.hackmeeting.org/hackit18/">
+              {externalLInkIcon}
+            </a>
+            <div className="flex">
+              <LinkCard
+                icon={<img src={bootstrap} width={20} alt="bootstrap" />}
+                link={"#"}
+                nameLink={"bootstrap"}
+                styles={
+                  "flex justify-center items-center gap-2 text-gray-600 bg-white"
+                }
+              />
+            </div>
+          </div>
         </Card>
       </div>
     </div>
