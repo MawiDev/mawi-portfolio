@@ -7,7 +7,6 @@ import macraman from "./images/macraman.png";
 import asilo from "./images/asilo.png";
 import npmIcon from "./icons/npm.png";
 
-import TimeClock from "./components/TimeClock";
 import {
   LinkCard,
   LinkSlot,
@@ -53,255 +52,260 @@ function Card({ children, styles }) {
 
 function App() {
   return (
-    <div className="flex flex-col md:flex-wrap justify-start md:justify-center items-center bg-neutral-100 w-full lg:h-[100vh]">
-      {/* CLOCK */}
-      <Card
-        styles={
-          "p-2 bg-white text-black text-2xl flex-col justify-center items-center gap-6 hidden sm:w-full lg:flex lg:w-[150px]"
-        }
-      >
-        <TimeClock />
-      </Card>
-      {/* PROFILE */}
-      <Card
-        styles={
-          "p-6 bg-[#454545] text-white flex flex-col justify-center items-center gap-6 sm:w-full md:w-[330px]"
-        }
-      >
-        <div className="flex justify-center items-center gap-6">
-          <ProfileImg styles={"rounded-full border-2 border-white"} />
-          <div>
-            <h1 className="text-4xl font-semibold">MawiDev</h1>
-            <h4 className="text-lg font-light">Web Developer</h4>
+    <div className="bg-neutral-100 lg:px-24 flex justify-center items-center lg:h-[100vh]">
+      <div className="flex flex-wrap justify-center">
+        {/* PROFILE */}
+        <Card
+          styles={
+            "p-6 bg-[#454545] text-white flex flex-col justify-center items-center gap-6 sm:w-full md:w-[330px]"
+          }
+        >
+          <div className="flex justify-center items-center gap-6">
+            <ProfileImg styles={"rounded-full border-2 border-white"} />
+            <div>
+              <h1 className="text-4xl font-semibold">MawiDev</h1>
+              <h4 className="text-lg font-light">Web Developer</h4>
+            </div>
           </div>
-        </div>
 
-        <LinkSlot>
-          <LinkCard
-            icon={linkedin}
-            link={"https://www.linkedin.com/in/riccardo-savio-368205275/"}
-            nameLink={"Linkedim"}
-            styles={
-              "flex justify-center items-center  gap-2 text-blue-600 bg-blue-200"
-            }
-          />
-          <LinkCard
-            icon={mastodon}
-            link={"https://mastodon.uno/@mawiDev"}
-            nameLink={"Mastodon"}
-            styles={
-              "flex justify-center items-center  gap-2 text-purple-600 bg-purple-200"
-            }
-          />
-          <LinkCard
-            icon={github}
-            link={"https://github.com/MawiDev"}
-            nameLink={"GitHub"}
-            styles={
-              "flex justify-center items-center gap-2 text-gray-600 bg-gray-200"
-            }
-          />
-          <LinkCard
-            icon={npm}
-            link={"https://www.npmjs.com/~mawidev"}
-            nameLink={"npmjs"}
-            styles={
-              "flex justify-center items-center gap-2 text-red-600 bg-red-200"
-            }
-          />
-        </LinkSlot>
-      </Card>
-      {/* STACK */}
-      <Card
-        styles={
-          "p-6 bg-white text-white flex flex-col justify-center items-center gap-6 sm:w-full md:w-[300px]"
-        }
-      >
-        <h1 className="text-2xl font-semibold text-[#454545]">Stack</h1>
-        <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
-          <IconTech icon={react} />
-          <IconTech icon={tailwind} />
-          <IconTech icon={php} />
-          <IconTech
-            icon={"https://blade-ui-kit.com/images/icon.svg"}
-            iconSize={30}
-          />
-          <IconTech
-            icon={"https://laravel.com/img/logomark.min.svg"}
-            iconSize={36}
-          />
-        </div>
-      </Card>
-      {/* OSTEOPATA */}
-      <Card
-        styles={
-          "p-5 bg-green-200 flex flex-col justify-start items-start gap-6 hover:bg-green-300"
-        }
-      >
-        <h3 className="px-2 lg:text-lg font-semibold uppercase text-green-800">
-          Osteopata Chiara Bertoldo
-        </h3>
-        <img src={osteopata} width={400} alt="preview" className="rounded-md" />
-        <div className="px-2 flex flex-col gap-4 lg:gap-0 lg:flex-row justify-between w-full">
-          <a href="https://www.osteopatachiarabertoldo.it/">
-            {externalLInkIcon}
-          </a>
-          <div className="flex gap-4">
+          <LinkSlot>
             <LinkCard
-              icon={<img src={react} width={20} alt="react" />}
-              link={"#"}
-              nameLink={"React"}
+              icon={linkedin}
+              link={"https://www.linkedin.com/in/riccardo-savio-368205275/"}
+              nameLink={"Linkedim"}
               styles={
-                "flex justify-center items-center gap-2 text-gray-600 bg-white"
+                "flex justify-center items-center  gap-2 text-blue-600 bg-blue-200"
               }
             />
             <LinkCard
-              icon={<img src={tailwind} width={20} alt="tailwind" />}
-              link={"#"}
-              nameLink={"Tailwind"}
+              icon={mastodon}
+              link={"https://mastodon.uno/@mawiDev"}
+              nameLink={"Mastodon"}
               styles={
-                "flex justify-center items-center gap-2 text-gray-600 bg-white"
-              }
-            />
-          </div>
-        </div>
-      </Card>
-      {/* PAOLO PONGA */}
-      <Card
-        styles={
-          "p-5 bg-blue-200 flex flex-col justify-start items-start gap-6 hover:bg-blue-300"
-        }
-      >
-        <h3 className="px-2 lg:text-lg font-semibold uppercase text-blue-800">
-          Paolo Ponga - Scrittore e Giornalista
-        </h3>
-        <img src={ponga} width={400} alt="preview" className="rounded-md" />
-        <div className="px-2 flex  flex-col gap-4 lg:gap-0 lg:flex-row justify-between w-full">
-          <a href="https://paoloponga.it/">{externalLInkIcon}</a>
-          <div className="flex flex-wrap gap-4">
-            <LinkCard
-              icon={
-                <img
-                  src={"https://laravel.com/img/logomark.min.svg"}
-                  width={20}
-                  alt="laravel"
-                />
-              }
-              link={"#"}
-              nameLink={"Laravel"}
-              styles={
-                "flex justify-center items-center gap-2 text-gray-600 bg-white"
+                "flex justify-center items-center  gap-2 text-purple-600 bg-purple-200"
               }
             />
             <LinkCard
-              icon={<img src={tailwind} width={20} alt="tailwind" />}
-              link={"#"}
-              nameLink={"Tailwind"}
+              icon={github}
+              link={"https://github.com/MawiDev"}
+              nameLink={"GitHub"}
               styles={
-                "flex justify-center items-center gap-2 text-gray-600 bg-white"
-              }
-            />
-          </div>
-        </div>
-      </Card>
-      {/* MACRAMAN */}
-      <Card
-        styles={
-          "p-5 bg-red-200 flex flex-col justify-start items-start gap-6 hover:bg-red-300"
-        }
-      >
-        <h3 className="px-2 lg:text-lg font-semibold uppercase text-red-800">
-          Macraman
-        </h3>
-        <img src={macraman} width={400} alt="preview" className="rounded-md" />
-        <div className="px-2 flex  flex-col gap-4 lg:gap-0 lg:flex-row justify-between w-full">
-          <a href="https://www.macraman.it/">{externalLInkIcon}</a>
-          <div className="flex flex-wrap gap-4">
-            <LinkCard
-              icon={
-                <img
-                  src={"https://laravel.com/img/logomark.min.svg"}
-                  width={20}
-                  alt="laravel"
-                />
-              }
-              link={"#"}
-              nameLink={"Laravel"}
-              styles={
-                "flex justify-center items-center gap-2 text-gray-600 bg-white"
+                "flex justify-center items-center gap-2 text-gray-600 bg-gray-200"
               }
             />
             <LinkCard
-              icon={<img src={tailwind} width={20} alt="tailwind" />}
-              link={"#"}
-              nameLink={"Tailwind"}
+              icon={npm}
+              link={"https://www.npmjs.com/~mawidev"}
+              nameLink={"npmjs"}
               styles={
-                "flex justify-center items-center gap-2 text-gray-600 bg-white"
+                "flex justify-center items-center gap-2 text-red-600 bg-red-200"
               }
             />
-          </div>
-        </div>
-      </Card>
-      {/* ASILO MINI CASA */}
-      <Card
-        styles={
-          "p-5 bg-cyan-200 flex flex-col justify-start items-start gap-6 hover:bg-cyan-300"
-        }
-      >
-        <h3 className="px-2 lg:text-lg font-semibold uppercase text-cyan-800">
-          Asilo nido Mini Casa dei Bimbi
-        </h3>
-        <img src={asilo} width={400} alt="preview" className="rounded-md" />
-        <div className="px-2 flex flex-col gap-4 lg:gap-0 lg:flex-row justify-between w-full">
-          <a href="https://www.asilonidominicasadeibimbi.it/">
-            {externalLInkIcon}
-          </a>
-          <div className="flex gap-4">
-            <LinkCard
-              icon={<img src={react} width={20} alt="react" />}
-              link={"#"}
-              nameLink={"React"}
-              styles={
-                "flex justify-center items-center gap-2 text-gray-600 bg-white"
-              }
-            />
-            <LinkCard
-              icon={<img src={tailwind} width={20} alt="tailwind" />}
-              link={"#"}
-              nameLink={"Tailwind"}
-              styles={
-                "flex justify-center items-center gap-2 text-gray-600 bg-white"
-              }
-            />
-          </div>
-        </div>
-      </Card>
-      {/* NPM PACK*/}
-      <Card
-        styles={
-          "px-6 pb-6 bg-white flex flex-col justify-center items-center gap-6 sm:w-full md:w-[300px]"
-        }
-      >
-        <img src={npmIcon} alt="npm" width={80}/>
-        <a
-          href="https://www.npmjs.com/package/laravel-watch-ftp"
-          target="_blank"
-          rel="noreferrer"
-          className="flex justify-around items-center w-full"
+          </LinkSlot>
+        </Card>
+        {/* STACK */}
+        <Card
+          styles={
+            "p-6 bg-white text-white flex flex-col justify-center items-center gap-6 sm:w-full md:w-[300px]"
+          }
         >
-          {externalLInkIconDark}
-          <h4 className="text-xl hover:underline">laravel-watch-ftp</h4>
-        </a>
-        <a
-          href="https://www.npmjs.com/package/mawi-react-app"
-          target="_blank"
-          rel="noreferrer"
-          className="flex justify-around items-center w-full"
+          <h1 className="text-2xl font-semibold text-[#454545]">Stack</h1>
+          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
+            <IconTech icon={react} />
+            <IconTech icon={tailwind} />
+            <IconTech icon={php} />
+            <IconTech
+              icon={"https://blade-ui-kit.com/images/icon.svg"}
+              iconSize={30}
+            />
+            <IconTech
+              icon={"https://laravel.com/img/logomark.min.svg"}
+              iconSize={36}
+            />
+          </div>
+        </Card>
+
+        {/* OSTEOPATA */}
+        <Card
+          styles={
+            "p-5 bg-green-200 flex flex-col justify-start items-start gap-6 hover:bg-green-300"
+          }
         >
-          {externalLInkIconDark}
-          <h4 className="text-xl hover:underline">mawi-react-app</h4>
-        </a>
-      </Card>
+          <h3 className="px-2 lg:text-lg font-semibold uppercase text-green-800">
+            Osteopata Chiara Bertoldo
+          </h3>
+          <img
+            src={osteopata}
+            width={350}
+            alt="preview"
+            className="rounded-md"
+          />
+          <div className="px-2 flex flex-col gap-4 lg:gap-0 lg:flex-row justify-between w-full">
+            <a href="https://www.osteopatachiarabertoldo.it/">
+              {externalLInkIcon}
+            </a>
+            <div className="flex gap-4">
+              <LinkCard
+                icon={<img src={react} width={20} alt="react" />}
+                link={"#"}
+                nameLink={"React"}
+                styles={
+                  "flex justify-center items-center gap-2 text-gray-600 bg-white"
+                }
+              />
+              <LinkCard
+                icon={<img src={tailwind} width={20} alt="tailwind" />}
+                link={"#"}
+                nameLink={"Tailwind"}
+                styles={
+                  "flex justify-center items-center gap-2 text-gray-600 bg-white"
+                }
+              />
+            </div>
+          </div>
+        </Card>
+        {/* PAOLO PONGA */}
+        <Card
+          styles={
+            "p-5 bg-blue-200 flex flex-col justify-start items-start gap-6 hover:bg-blue-300"
+          }
+        >
+          <h3 className="px-2 lg:text-lg font-semibold uppercase text-blue-800">
+            Paolo Ponga
+          </h3>
+          <img src={ponga} width={350} alt="preview" className="rounded-md" />
+          <div className="px-2 flex  flex-col gap-4 lg:gap-0 lg:flex-row justify-between w-full">
+            <a href="https://paoloponga.it/">{externalLInkIcon}</a>
+            <div className="flex flex-wrap gap-4">
+              <LinkCard
+                icon={
+                  <img
+                    src={"https://laravel.com/img/logomark.min.svg"}
+                    width={20}
+                    alt="laravel"
+                  />
+                }
+                link={"#"}
+                nameLink={"Laravel"}
+                styles={
+                  "flex justify-center items-center gap-2 text-gray-600 bg-white"
+                }
+              />
+              <LinkCard
+                icon={<img src={tailwind} width={20} alt="tailwind" />}
+                link={"#"}
+                nameLink={"Tailwind"}
+                styles={
+                  "flex justify-center items-center gap-2 text-gray-600 bg-white"
+                }
+              />
+            </div>
+          </div>
+        </Card>
+        {/* MACRAMAN */}
+        <Card
+          styles={
+            "p-5 bg-red-200 flex flex-col justify-start items-start gap-6 hover:bg-red-300"
+          }
+        >
+          <h3 className="px-2 lg:text-lg font-semibold uppercase text-red-800">
+            Macraman
+          </h3>
+          <img
+            src={macraman}
+            width={350}
+            alt="preview"
+            className="rounded-md"
+          />
+          <div className="px-2 flex  flex-col gap-4 lg:gap-0 lg:flex-row justify-between w-full">
+            <a href="https://www.macraman.it/">{externalLInkIcon}</a>
+            <div className="flex flex-wrap gap-4">
+              <LinkCard
+                icon={
+                  <img
+                    src={"https://laravel.com/img/logomark.min.svg"}
+                    width={20}
+                    alt="laravel"
+                  />
+                }
+                link={"#"}
+                nameLink={"Laravel"}
+                styles={
+                  "flex justify-center items-center gap-2 text-gray-600 bg-white"
+                }
+              />
+              <LinkCard
+                icon={<img src={tailwind} width={20} alt="tailwind" />}
+                link={"#"}
+                nameLink={"Tailwind"}
+                styles={
+                  "flex justify-center items-center gap-2 text-gray-600 bg-white"
+                }
+              />
+            </div>
+          </div>
+        </Card>
+        {/* ASILO MINI CASA */}
+        <Card
+          styles={
+            "p-5 bg-cyan-200 flex flex-col justify-start items-start gap-6 hover:bg-cyan-300"
+          }
+        >
+          <h3 className="px-2 lg:text-lg font-semibold uppercase text-cyan-800">
+            Asilo nido Mini Casa dei Bimbi
+          </h3>
+          <img src={asilo} width={350} alt="preview" className="rounded-md" />
+          <div className="px-2 flex flex-col gap-4 lg:gap-0 lg:flex-row justify-between w-full">
+            <a href="https://www.asilonidominicasadeibimbi.it/">
+              {externalLInkIcon}
+            </a>
+            <div className="flex gap-4">
+              <LinkCard
+                icon={<img src={react} width={20} alt="react" />}
+                link={"#"}
+                nameLink={"React"}
+                styles={
+                  "flex justify-center items-center gap-2 text-gray-600 bg-white"
+                }
+              />
+              <LinkCard
+                icon={<img src={tailwind} width={20} alt="tailwind" />}
+                link={"#"}
+                nameLink={"Tailwind"}
+                styles={
+                  "flex justify-center items-center gap-2 text-gray-600 bg-white"
+                }
+              />
+            </div>
+          </div>
+        </Card>
+        {/* NPM PACK*/}
+        <Card
+          styles={
+            "px-6 pb-6 bg-white flex flex-col justify-center items-center gap-6 sm:w-full md:w-[300px]"
+          }
+        >
+          <img src={npmIcon} alt="npm" width={80} />
+          <a
+            href="https://www.npmjs.com/package/laravel-watch-ftp"
+            target="_blank"
+            rel="noreferrer"
+            className="flex justify-around items-center w-full"
+          >
+            {externalLInkIconDark}
+            <h4 className="text-xl hover:underline">laravel-watch-ftp</h4>
+          </a>
+          <a
+            href="https://www.npmjs.com/package/mawi-react-app"
+            target="_blank"
+            rel="noreferrer"
+            className="flex justify-around items-center w-full"
+          >
+            {externalLInkIconDark}
+            <h4 className="text-xl hover:underline">mawi-react-app</h4>
+          </a>
+        </Card>
+      </div>
     </div>
   );
 }
