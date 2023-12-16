@@ -58,7 +58,7 @@ function App() {
   return (
     <div className="bg-neutral-100 p-6 flex flex-col md:flex-wrap justify-center items-center 2xl:h-[100vh] cursor-default">
       <Card styles={"bg-[#454545] lg:absolute text-white px-6 flex items-center gap-4 py-2 top-8 left-16"}>
-        <a href="/" className="bg-[#454545]">
+        <a href="https://bafybeiguqj63bvdtxpo56lpoe4uyrm7wdlcnnpjrvkpmrpmhgx4etoxwae.ipfs.dweb.link/" className="bg-[#454545]">
           <img src={ipfs} alt="ipfs" width={75}/>
         </a>
         <p>|</p>
