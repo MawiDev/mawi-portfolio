@@ -8,6 +8,8 @@ import asilo from "./images/asilo.png";
 import npmIcon from "./icons/npm.png";
 import bootstrap from "./icons/bootstrap.png";
 import hackmeeting from "./images/hackmeeting.png";
+import ipfs from "./icons/ipfs.svg";
+import tor from "./icons/tor.png";
 
 import {
   LinkCard,
@@ -55,6 +57,15 @@ function Card({ children, styles }) {
 function App() {
   return (
     <div className="bg-neutral-100 p-6 flex justify-center items-center 2xl:h-[100vh] cursor-default">
+      <Card styles={"bg-[#454545] absolute text-white px-6 flex items-center gap-4 py-2 top-8 left-16"}>
+        <a href="/" className="bg-[#454545]">
+          <img src={ipfs} alt="ipfs" width={75}/>
+        </a>
+        <p>|</p>
+        <a href="/" className="bg-[#454545]">
+          <img src={tor} alt="ipfs" width={50}/>
+        </a>
+      </Card>
       <div className="flex flex-wrap justify-center">
         {/* PROFILE */}
         <Card
@@ -65,7 +76,7 @@ function App() {
           <div className="flex gap-6 justify-center items-center">
             <ProfileImg styles={"rounded-full border-2 border-white"} />
             <div>
-              <h1 className="text-4xl font-semibold">Riccardo Savio</h1>
+              <h1 className="text-4xl font-semibold">Mawi</h1>
               <h4 className="text-lg font-light">Web Developer</h4>
             </div>
           </div>
