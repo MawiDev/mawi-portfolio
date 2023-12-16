@@ -57,7 +57,7 @@ function Card({ children, styles }) {
 function App() {
   return (
     <div className="bg-neutral-100 p-6 flex justify-center items-center 2xl:h-[100vh] cursor-default">
-      <Card styles={"bg-[#454545] absolute text-white px-6 flex items-center gap-4 py-2 top-8 left-16"}>
+      <Card styles={"bg-[#454545] relative lg:absolute text-white px-6 flex items-center gap-4 py-2 top-8 left-16"}>
         <a href="/" className="bg-[#454545]">
           <img src={ipfs} alt="ipfs" width={75}/>
         </a>
