@@ -50,7 +50,7 @@ const externalLInkIconDark = (
 );
 
 function Card({ children, styles }) {
-  return <div className={`rounded-md shadow-md m-2 ${styles}`}>{children}</div>;
+  return <div className={`m-2 rounded-md shadow-md ${styles}`}>{children}</div>;
 }
 
 function App() {
@@ -63,7 +63,7 @@ function App() {
             "p-6 bg-[#454545] text-white flex flex-col justify-center items-center gap-6 sm:w-full md:w-[330px]"
           }
         >
-          <div className="flex justify-center items-center gap-6">
+          <div className="flex gap-6 justify-center items-center">
             <ProfileImg styles={"rounded-full border-2 border-white"} />
             <div>
               <h1 className="text-4xl font-semibold">Riccardo Savio</h1>
@@ -113,7 +113,7 @@ function App() {
           }
         >
           <h1 className="text-2xl font-semibold text-[#454545]">Stack</h1>
-          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
+          <div className="flex flex-wrap gap-y-6 gap-x-12 justify-center items-center">
             <IconTech icon={react} />
             <IconTech icon={tailwind} />
             <IconTech icon={php} />
@@ -146,7 +146,7 @@ function App() {
             "p-5 bg-green-200 flex flex-col justify-start items-start gap-6 hover:bg-green-300"
           }
         >
-          <h3 className="px-2 lg:text-lg font-semibold uppercase text-green-800">
+          <h3 className="px-2 font-semibold text-green-800 uppercase lg:text-lg">
             Osteopata Chiara Bertoldo
           </h3>
           <img
@@ -155,7 +155,7 @@ function App() {
             alt="preview"
             className="rounded-md"
           />
-          <div className="px-2 flex flex-col gap-4 lg:gap-0 lg:flex-row justify-between w-full">
+          <div className="flex flex-col gap-4 justify-between px-2 w-full lg:gap-0 lg:flex-row">
             <a href="https://www.osteopatachiarabertoldo.it/">
               {externalLInkIcon}
             </a>
@@ -185,11 +185,11 @@ function App() {
             "p-5 bg-blue-200 flex flex-col justify-start items-start gap-6 hover:bg-blue-300"
           }
         >
-          <h3 className="px-2 lg:text-lg font-semibold uppercase text-blue-800">
+          <h3 className="px-2 font-semibold text-blue-800 uppercase lg:text-lg">
             Paolo Ponga
           </h3>
           <img src={ponga} width={350} alt="preview" className="rounded-md" />
-          <div className="px-2 flex  flex-col gap-4 lg:gap-0 lg:flex-row justify-between w-full">
+          <div className="flex flex-col gap-4 justify-between px-2 w-full lg:gap-0 lg:flex-row">
             <a href="https://paoloponga.it/">{externalLInkIcon}</a>
             <div className="flex flex-wrap gap-4">
               <LinkCard
@@ -223,7 +223,7 @@ function App() {
             "p-5 bg-red-200 flex flex-col justify-start items-start gap-6 hover:bg-red-300"
           }
         >
-          <h3 className="px-2 lg:text-lg font-semibold uppercase text-red-800">
+          <h3 className="px-2 font-semibold text-red-800 uppercase lg:text-lg">
             Macraman
           </h3>
           <img
@@ -232,7 +232,7 @@ function App() {
             alt="preview"
             className="rounded-md"
           />
-          <div className="px-2 flex  flex-col gap-4 lg:gap-0 lg:flex-row justify-between w-full">
+          <div className="flex flex-col gap-4 justify-between px-2 w-full lg:gap-0 lg:flex-row">
             <a href="https://www.macraman.it/">{externalLInkIcon}</a>
             <div className="flex flex-wrap gap-4">
               <LinkCard
@@ -266,11 +266,11 @@ function App() {
             "p-5 bg-cyan-200 flex flex-col justify-start items-start gap-6 hover:bg-cyan-300"
           }
         >
-          <h3 className="px-2 lg:text-lg font-semibold uppercase text-cyan-800">
+          <h3 className="px-2 font-semibold text-cyan-800 uppercase lg:text-lg">
             Asilo nido Mini Casa dei Bimbi
           </h3>
           <img src={asilo} width={350} alt="preview" className="rounded-md" />
-          <div className="px-2 flex flex-col gap-4 lg:gap-0 lg:flex-row justify-between w-full">
+          <div className="flex flex-col gap-4 justify-between px-2 w-full lg:gap-0 lg:flex-row">
             <a href="https://www.asilonidominicasadeibimbi.it/">
               {externalLInkIcon}
             </a>
@@ -326,7 +326,7 @@ function App() {
             "p-5 bg-[#454545] flex flex-col justify-start items-start gap-6 hover:bg-gray-400"
           }
         >
-          <h3 className="px-2 lg:text-lg font-semibold uppercase text-white">
+          <h3 className="px-2 font-semibold text-white uppercase lg:text-lg">
             Hackmeeting 0x15
           </h3>
           <img
@@ -335,7 +335,7 @@ function App() {
             alt="preview"
             className="rounded-md"
           />
-          <div className="px-2 flex flex-row justify-between w-full">
+          <div className="flex flex-row justify-between px-2 w-full">
             <a href="https://www.hackmeeting.org/hackit18/">
               {externalLInkIcon}
             </a>
@@ -350,12 +350,6 @@ function App() {
               />
             </div>
           </div>
-        </Card>
-        <Card styles={
-            "p-6 bg-neutral-500 flex flex-col gap-12 justofy-center items-center w-full md:w-[250px] hover:bg-neutral-700"
-          }>
-          <h3 className="text-xl text-white font-semibold">Write me</h3>
-          <EmailForm/>
         </Card>
       </div>
     </div>
