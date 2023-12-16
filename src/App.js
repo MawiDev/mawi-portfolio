@@ -19,7 +19,6 @@ import {
   npm,
 } from "./components/ProfileCardComps";
 import { IconTech } from "./components/StackCardComps";
-import EmailForm from "./components/EmailForm";
 
 const externalLInkIcon = (
   <svg
