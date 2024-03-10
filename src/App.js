@@ -8,8 +8,8 @@ import asilo from "./images/asilo.png";
 import npmIcon from "./icons/npm.png";
 import bootstrap from "./icons/bootstrap.png";
 import hackmeeting from "./images/hackmeeting.png";
+import futsukayoi from './images/futsukayoi.png'
 import ipfs from "./icons/ipfs.svg";
-import tor from "./icons/tor.png";
 
 import {
   LinkCard,
@@ -56,14 +56,10 @@ function Card({ children, styles }) {
 
 function App() {
   return (
-    <div className="bg-neutral-100 p-6 flex flex-col md:flex-wrap justify-center items-center 2xl:h-[100vh] cursor-default">
+    <div className="flex flex-col justify-center items-center p-6 cursor-default bg-neutral-100 xl:py-24 md:flex-wrap">
       <Card styles={"bg-[#454545] lg:absolute text-white px-6 flex items-center gap-4 py-2 top-8 left-16"}>
         <a href="https://bafybeiguqj63bvdtxpo56lpoe4uyrm7wdlcnnpjrvkpmrpmhgx4etoxwae.ipfs.dweb.link/" className="bg-[#454545]">
           <img src={ipfs} alt="ipfs" width={75}/>
-        </a>
-        <p>|</p>
-        <a href="/" className="bg-[#454545]">
-          <img src={tor} alt="ipfs" width={50}/>
         </a>
       </Card>
       <div className="flex flex-wrap justify-center">
@@ -149,6 +145,45 @@ function App() {
             development. <br /> I'm learning react and laravel and making
             websites as a freelancer.
           </p>
+        </Card>
+        {/* FUSTUKAYOI */}
+        <Card
+          styles={
+            "p-5 bg-[#454545] flex flex-col justify-start items-start gap-6 hover:bg-gray-400"
+          }
+        >
+          <h3 className="px-2 font-semibold text-yellow-400 uppercase lg:text-lg">
+            FUSTUKAYOI
+          </h3>
+          <img
+            src={futsukayoi}
+            width={350}
+            alt="preview"
+            className="rounded-md"
+          />
+          <div className="flex flex-row justify-between px-2 w-full">
+            <a href="https://futsukayoi.vercel.app/">
+              {externalLInkIcon}
+            </a>
+            <div className="flex gap-4">
+              <LinkCard
+                icon={<img src={react} width={20} alt="react" />}
+                link={"#"}
+                nameLink={"React"}
+                styles={
+                  "flex justify-center items-center gap-2 text-gray-600 bg-white"
+                }
+              />
+              <LinkCard
+                icon={<img src={tailwind} width={20} alt="tailwind" />}
+                link={"#"}
+                nameLink={"Tailwind"}
+                styles={
+                  "flex justify-center items-center gap-2 text-gray-600 bg-white"
+                }
+              />
+            </div>
+          </div>
         </Card>
         {/* OSTEOPATA */}
         <Card
