@@ -149,7 +149,7 @@ function App() {
         {/* FUSTUKAYOI */}
         <Card
           styles={
-            "p-5 bg-[#454545] flex flex-col justify-start items-start gap-6 hover:bg-gray-400"
+            "p-5 bg-[#454545] flex flex-col justify-start items-start gap-6"
           }
         >
           <h3 className="px-2 font-semibold text-yellow-400 uppercase lg:text-lg">
@@ -161,7 +161,7 @@ function App() {
             alt="preview"
             className="rounded-md"
           />
-          <div className="flex flex-row justify-between px-2 w-full">
+          <div className="flex flex-col gap-4 justify-between px-2 w-full">
             <a href="https://futsukayoi.vercel.app/" target="_blank">
               {externalLInkIcon}
             </a>
