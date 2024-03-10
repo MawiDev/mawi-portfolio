@@ -72,7 +72,7 @@ function App() {
           <div className="flex gap-6 justify-center items-center">
             <ProfileImg styles={"rounded-full border-2 border-white"} />
             <div>
-              <h1 className="text-4xl font-semibold">Mawi</h1>
+              <h1 className="text-4xl font-semibold">Ri.Sa</h1>
               <h4 className="text-lg font-light">Web Developer</h4>
             </div>
           </div>
@@ -162,7 +162,7 @@ function App() {
             className="rounded-md"
           />
           <div className="flex flex-row justify-between px-2 w-full">
-            <a href="https://futsukayoi.vercel.app/">
+            <a href="https://futsukayoi.vercel.app/" target="_blank">
               {externalLInkIcon}
             </a>
             <div className="flex gap-4">
@@ -201,7 +201,7 @@ function App() {
             className="rounded-md"
           />
           <div className="flex flex-col gap-4 justify-between px-2 w-full lg:gap-0 lg:flex-row">
-            <a href="https://www.osteopatachiarabertoldo.it/">
+            <a href="https://www.osteopatachiarabertoldo.it/" target="_blank">
               {externalLInkIcon}
             </a>
             <div className="flex gap-4">
@@ -235,7 +235,7 @@ function App() {
           </h3>
           <img src={ponga} width={350} alt="preview" className="rounded-md" />
           <div className="flex flex-col gap-4 justify-between px-2 w-full lg:gap-0 lg:flex-row">
-            <a href="https://paoloponga.it/">{externalLInkIcon}</a>
+            <a href="https://paoloponga.it/" target="_blank">{externalLInkIcon}</a>
             <div className="flex flex-wrap gap-4">
               <LinkCard
                 icon={
@@ -278,7 +278,7 @@ function App() {
             className="rounded-md"
           />
           <div className="flex flex-col gap-4 justify-between px-2 w-full lg:gap-0 lg:flex-row">
-            <a href="https://www.macraman.it/">{externalLInkIcon}</a>
+            <a href="https://www.macraman.it/" target="_blank">{externalLInkIcon}</a>
             <div className="flex flex-wrap gap-4">
               <LinkCard
                 icon={
@@ -316,7 +316,7 @@ function App() {
           </h3>
           <img src={asilo} width={350} alt="preview" className="rounded-md" />
           <div className="flex flex-col gap-4 justify-between px-2 w-full lg:gap-0 lg:flex-row">
-            <a href="https://www.asilonidominicasadeibimbi.it/">
+            <a href="https://www.asilonidominicasadeibimbi.it/" target="_blank">
               {externalLInkIcon}
             </a>
             <div className="flex gap-4">
@@ -381,7 +381,7 @@ function App() {
             className="rounded-md"
           />
           <div className="flex flex-row justify-between px-2 w-full">
-            <a href="https://www.hackmeeting.org/hackit18/">
+            <a href="https://www.hackmeeting.org/hackit18/" target="_blank">
               {externalLInkIcon}
             </a>
             <div className="flex">
