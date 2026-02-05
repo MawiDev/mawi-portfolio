@@ -1,15 +1,16 @@
 import reactIcon from "./icons/react.png";
 import tailwindIcon from "./icons/tailwindcss.png";
 import php from "./icons/php.png";
-import osteopata from "./images/osteopata.png";
-import ponga from "./images/paoloponga.png";
-import macraman from "./images/macraman.png";
-import asilo from "./images/asilo.png";
 import npmIcon from "./icons/npm.png";
 import bootstrap from "./icons/bootstrap.png";
-import hackmeeting from "./images/hackmeeting.png";
-import futsukayoi from "./images/futsukayoi.png";
 import ipfs from "./icons/ipfs.svg";
+
+import osteopata from "./images/osteopata.webp";
+import ponga from "./images/paoloponga.webp";
+import macraman from "./images/macraman.webp";
+import asilo from "./images/asilo.webp";
+import hackmeeting from "./images/hackmeeting.webp";
+import futsukayoi from "./images/futsukayoi.webp";
 
 import {
   LinkCard,
@@ -21,6 +22,82 @@ import {
   npm,
 } from "./components/ProfileCardComps";
 import { IconTech } from "./components/StackCardComps";
+
+const LARAVEL_ICON = "https://laravel.com/img/logomark.min.svg";
+
+const projects = [
+  {
+    title: "FUSTUKAYOI",
+    image: futsukayoi,
+    alt: "Fustukayoi project preview",
+    url: "https://futsukayoi.vercel.app/",
+    cardStyles: "bg-[#454545]",
+    titleStyles: "text-yellow-400",
+    layoutStyles: "",
+    techs: [
+      { icon: reactIcon, name: "React" },
+      { icon: tailwindIcon, name: "Tailwind" },
+    ],
+  },
+  {
+    title: "Osteopata Chiara Bertoldo",
+    image: osteopata,
+    alt: "Osteopata Chiara Bertoldo project preview",
+    url: "https://www.osteopatachiarabertoldo.it/",
+    cardStyles: "bg-green-200 hover:bg-green-300",
+    titleStyles: "text-green-800",
+    techs: [
+      { icon: reactIcon, name: "React" },
+      { icon: tailwindIcon, name: "Tailwind" },
+    ],
+  },
+  {
+    title: "Paolo Ponga",
+    image: ponga,
+    alt: "Paolo Ponga project preview",
+    url: "https://paoloponga.it/",
+    cardStyles: "bg-blue-200 hover:bg-blue-300",
+    titleStyles: "text-blue-800",
+    techs: [
+      { icon: LARAVEL_ICON, name: "Laravel" },
+      { icon: tailwindIcon, name: "Tailwind" },
+    ],
+  },
+  {
+    title: "Macraman",
+    image: macraman,
+    alt: "Macraman project preview",
+    url: "https://www.macraman.it/",
+    cardStyles: "bg-red-200 hover:bg-red-300",
+    titleStyles: "text-red-800",
+    techs: [
+      { icon: LARAVEL_ICON, name: "Laravel" },
+      { icon: tailwindIcon, name: "Tailwind" },
+    ],
+  },
+  {
+    title: "Asilo nido Mini Casa dei Bimbi",
+    image: asilo,
+    alt: "Asilo Nido Mini Casa dei Bimbi project preview",
+    url: "https://www.asilonidominicasadeibimbi.it/",
+    cardStyles: "bg-cyan-200 hover:bg-cyan-300",
+    titleStyles: "text-cyan-800",
+    techs: [
+      { icon: reactIcon, name: "React" },
+      { icon: tailwindIcon, name: "Tailwind" },
+    ],
+  },
+  {
+    title: "Hackmeeting 0x15",
+    image: hackmeeting,
+    alt: "Hackmeeting 0x15 project preview",
+    url: "https://www.hackmeeting.org/hackit18/",
+    cardStyles: "bg-[#454545] hover:bg-gray-400",
+    titleStyles: "text-white",
+    layoutStyles: "flex-row justify-between",
+    techs: [{ icon: bootstrap, name: "Bootstrap" }],
+  },
+];
 
 function ExternalLinkIcon({ color = "#ffffff" }) {
   return (
@@ -48,9 +125,9 @@ function TechBadge({ icon, name }) {
   return (
     <LinkCard
       icon={<img src={icon} width={20} alt={name} />}
-      link={"#"}
+      link="#"
       nameLink={name}
-      styles={"flex justify-center items-center gap-2 text-gray-600 bg-white"}
+      styles="flex justify-center items-center gap-2 text-gray-600 bg-white"
     />
   );
 }
@@ -61,7 +138,13 @@ function ProjectCard({ title, image, alt, url, techs, cardStyles, titleStyles, l
       <h3 className={`px-2 font-semibold uppercase lg:text-lg ${titleStyles}`}>
         {title}
       </h3>
-      <img src={image} width={350} alt={alt} className="rounded-md" />
+      <img
+        src={image}
+        width={350}
+        alt={alt}
+        loading="lazy"
+        className="rounded-md"
+      />
       <div className={`flex flex-col gap-4 justify-between px-2 w-full ${layoutStyles || "lg:gap-0 lg:flex-row"}`}>
         <a href={url} target="_blank" rel="noreferrer">
           <ExternalLinkIcon />
@@ -138,10 +221,7 @@ function App() {
               icon="https://blade-ui-kit.com/images/icon.svg"
               iconSize={30}
             />
-            <IconTech
-              icon="https://laravel.com/img/logomark.min.svg"
-              iconSize={36}
-            />
+            <IconTech icon={LARAVEL_ICON} iconSize={36} />
           </div>
         </Card>
         {/* PRESENTAZIONE */}
@@ -153,75 +233,13 @@ function App() {
             websites as a freelancer.
           </p>
         </Card>
-        {/* FUSTUKAYOI */}
-        <ProjectCard
-          title="FUSTUKAYOI"
-          image={futsukayoi}
-          alt="Fustukayoi project preview"
-          url="https://futsukayoi.vercel.app/"
-          cardStyles="bg-[#454545]"
-          titleStyles="text-yellow-400"
-          layoutStyles=""
-          techs={[
-            { icon: reactIcon, name: "React" },
-            { icon: tailwindIcon, name: "Tailwind" },
-          ]}
-        />
-        {/* OSTEOPATA */}
-        <ProjectCard
-          title="Osteopata Chiara Bertoldo"
-          image={osteopata}
-          alt="Osteopata Chiara Bertoldo project preview"
-          url="https://www.osteopatachiarabertoldo.it/"
-          cardStyles="bg-green-200 hover:bg-green-300"
-          titleStyles="text-green-800"
-          techs={[
-            { icon: reactIcon, name: "React" },
-            { icon: tailwindIcon, name: "Tailwind" },
-          ]}
-        />
-        {/* PAOLO PONGA */}
-        <ProjectCard
-          title="Paolo Ponga"
-          image={ponga}
-          alt="Paolo Ponga project preview"
-          url="https://paoloponga.it/"
-          cardStyles="bg-blue-200 hover:bg-blue-300"
-          titleStyles="text-blue-800"
-          techs={[
-            { icon: "https://laravel.com/img/logomark.min.svg", name: "Laravel" },
-            { icon: tailwindIcon, name: "Tailwind" },
-          ]}
-        />
-        {/* MACRAMAN */}
-        <ProjectCard
-          title="Macraman"
-          image={macraman}
-          alt="Macraman project preview"
-          url="https://www.macraman.it/"
-          cardStyles="bg-red-200 hover:bg-red-300"
-          titleStyles="text-red-800"
-          techs={[
-            { icon: "https://laravel.com/img/logomark.min.svg", name: "Laravel" },
-            { icon: tailwindIcon, name: "Tailwind" },
-          ]}
-        />
-        {/* ASILO MINI CASA */}
-        <ProjectCard
-          title="Asilo nido Mini Casa dei Bimbi"
-          image={asilo}
-          alt="Asilo Nido Mini Casa dei Bimbi project preview"
-          url="https://www.asilonidominicasadeibimbi.it/"
-          cardStyles="bg-cyan-200 hover:bg-cyan-300"
-          titleStyles="text-cyan-800"
-          techs={[
-            { icon: reactIcon, name: "React" },
-            { icon: tailwindIcon, name: "Tailwind" },
-          ]}
-        />
-        {/* NPM PACK*/}
+        {/* PROJECTS */}
+        {projects.map((project) => (
+          <ProjectCard key={project.title} {...project} />
+        ))}
+        {/* NPM PACKAGES */}
         <Card styles="px-6 pb-6 bg-white flex flex-col justify-center items-center gap-6 w-full md:w-[300px]">
-          <img src={npmIcon} alt="npm packages" width={80} />
+          <img src={npmIcon} alt="npm packages" width={80} loading="lazy" />
           <a
             href="https://www.npmjs.com/package/laravel-watch-ftp"
             target="_blank"
@@ -241,17 +259,6 @@ function App() {
             <h4 className="text-xl hover:underline">mawi-react-app</h4>
           </a>
         </Card>
-        {/* HACKMEETING */}
-        <ProjectCard
-          title="Hackmeeting 0x15"
-          image={hackmeeting}
-          alt="Hackmeeting 0x15 project preview"
-          url="https://www.hackmeeting.org/hackit18/"
-          cardStyles="bg-[#454545] hover:bg-gray-400"
-          titleStyles="text-white"
-          layoutStyles="flex-row justify-between"
-          techs={[{ icon: bootstrap, name: "Bootstrap" }]}
-        />
       </div>
     </div>
   );
