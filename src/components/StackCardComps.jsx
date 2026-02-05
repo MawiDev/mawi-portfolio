@@ -1,3 +1,3 @@
-export function IconTech({ icon, iconSize }) {
-  return <img src={icon} alt="icon-tech" width={iconSize} />;
+export function IconTech({ icon, iconSize = 45 }) {
+  return <img src={icon} alt="technology icon" width={iconSize} />;
 }
